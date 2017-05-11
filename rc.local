@@ -1,0 +1,11 @@
+ifconfig lo:1 127.0.0.2
+route add -net 224.0.0.0 netmask 240.0.0.0 dev lo:1
+udpxy -p 81 -c 60
+nohup mumudvb -vvvv -c /etc/mumudvb/2_tvone.conf -d &
+nohup mumudvb -vvvv -c /etc/mumudvb/3_indosiar.conf -d &
+nohup mumudvb -vvvv -c /etc/mumudvb/4_metrotv.conf -d &
+nohup mumudvb -vvvv -c /etc/mumudvb/8_mnc.conf -d &
+nohup mumudvb -vvvv -c /etc/mumudvb/10_antv.conf -d &
+nohup mumudvb -vvvv -c /etc/mumudvb/11_trans7.conf -d &
+nohup mumudvb -vvvv -c /etc/mumudvb/12_transtv.conf -d &
+
